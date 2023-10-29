@@ -1,14 +1,14 @@
 package com.selector.restaurant.restaurant;
 
+import com.selector.restaurant.common.RestaurantConstants;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Optional;
 import java.util.Random;
 
 @Service
@@ -20,7 +20,8 @@ public class RestaurantServiceImpl implements RestaurantService {
     private RestaurantRepo restaurantRepo;
 
     /**
-     * Sends restaurant to RestaurantRepo
+     * Sends restaurant to be stored in database
+     * @throws IllegalStateException if Restaurant can be found in database
      * @param restaurant
      * @return
      */
@@ -35,24 +36,41 @@ public class RestaurantServiceImpl implements RestaurantService {
                 .filter(r -> r.getName().equals(restaurant.getName()))
                 .findFirst()
                 .orElse(null) != null)
-            throw new IllegalStateException("Restaurant Name has been previously submitted");
+            throw new IllegalStateException(RestaurantConstants.DUPLICATE_RESTAURANT);
 
         return restaurantRepo.save(restaurant);
         //return restaurantRepo.add(restaurant);
     }
 
+    /**
+     * Returns a random Restaurant from database
+     * @throws IllegalStateException if no Restaurants can be found in database
+     * @return Restaurant
+     */
     @Override
     public Restaurant getAtRandom() {
         logger.info("[Retrieving restaurant from pool at random]");
         if(getList().isEmpty())
-            throw new IllegalStateException("No restaurant names have been submitted");
-        int index = new Random().nextInt(getList().size()) + 1;
-        Long value = Integer.toUnsignedLong(index);
+            throw new IllegalStateException(RestaurantConstants.NO_RESTAURANT);
+
+        ArrayList<Restaurant> list = new ArrayList<>(getList());
+        int index = new Random().nextInt(list.size());
+        Long value = list.get(index).getId();
+
         return restaurantRepo.findById(value).get();
     }
 
+    /**
+     * Retrieve all restaurants stored in database
+     * @return
+     */
     @Override
     public Collection<Restaurant> getList() {
         return (Collection<Restaurant>) restaurantRepo.findAll();
+    }
+
+    @Override
+    public void clearRepo() {
+        restaurantRepo.deleteAll();
     }
 }

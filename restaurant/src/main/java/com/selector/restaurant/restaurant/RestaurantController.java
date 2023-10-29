@@ -1,5 +1,6 @@
 package com.selector.restaurant.restaurant;
 
+import com.selector.restaurant.common.RestaurantConstants;
 import com.selector.restaurant.response.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -22,8 +23,8 @@ public class RestaurantController {
                             .setTimestamp(LocalDateTime.now())
                             .setStatus(HttpStatus.OK)
                             .setStatusCode(HttpStatus.OK.value())
-                            .setData(Map.of("submitted", restaurantService.add(restaurant)))
-                            .setMessage("Restaurant Submitted")
+                            .setData(Map.of(RestaurantConstants.SUBMITTED, restaurantService.add(restaurant)))
+                            .setMessage(RestaurantConstants.SUBMITTED_SUCCESS)
                             .build()
             );
         } catch (Exception e) {
@@ -47,8 +48,8 @@ public class RestaurantController {
                             .setTimestamp(LocalDateTime.now())
                             .setStatus(HttpStatus.OK)
                             .setStatusCode(HttpStatus.OK.value())
-                            .setMessage("Retrieved random restaurant")
-                            .setData(Map.of("retrieved", restaurantService.getAtRandom()))
+                            .setMessage(RestaurantConstants.RETRIEVED_SUCCESS)
+                            .setData(Map.of(RestaurantConstants.RETRIEVED, restaurantService.getAtRandom()))
                             .build()
             );
         } catch (IllegalStateException e) {

@@ -7,4 +7,5 @@ public interface RestaurantService {
     Restaurant add(Restaurant restaurant);
     Restaurant getAtRandom();
     Collection<Restaurant> getList();
+    void clearRepo();
 }
