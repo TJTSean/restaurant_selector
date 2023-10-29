@@ -1,0 +1,20 @@
+<div class="card my-5">
+    <div>
+        <label [innerHTML]="retrieveStatus"></label>
+    </div>
+    <div class="card-body">
+        <label>Name: {{ restaurant.name }}</label>
+        <br />
+        <label>Address: {{ restaurant.address }}</label>
+        <br />
+        <label>Submitted By: {{ restaurant.submitted_By }}</label>
+        <br />
+    </div>
+  </div>
+
+  <div>
+    <form (ngSubmit)="onClick()" #userForm="ngForm">
+        <button type="submit" [disabled]="!userForm.form.valid" 
+          class="btn btn-info">Submit</button>
+      </form>
+  </div>

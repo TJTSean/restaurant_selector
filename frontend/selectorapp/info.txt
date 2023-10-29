@@ -1,0 +1,239 @@
+[
+    {
+        "Id": "015cdeb3462ebdcd8a40317d3228384bcc358813cb1343261a6a22cfd442923f",
+        "Created": "2023-10-29T07:15:22.677855621Z",
+        "Path": "java",
+        "Args": [
+            "-jar",
+            "/usr/local/lib/restaurant.jar"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 15892,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2023-10-29T07:15:23.143321304Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:fbd8ffde2ed88640048fa824c5f7fc20dc12f1c8c63771287ef50bc17cc12550",
+        "ResolvConfPath": "/var/lib/docker/containers/015cdeb3462ebdcd8a40317d3228384bcc358813cb1343261a6a22cfd442923f/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/015cdeb3462ebdcd8a40317d3228384bcc358813cb1343261a6a22cfd442923f/hostname",
+        "HostsPath": "/var/lib/docker/containers/015cdeb3462ebdcd8a40317d3228384bcc358813cb1343261a6a22cfd442923f/hosts",
+        "LogPath": "/var/lib/docker/containers/015cdeb3462ebdcd8a40317d3228384bcc358813cb1343261a6a22cfd442923f/015cdeb3462ebdcd8a40317d3228384bcc358813cb1343261a6a22cfd442923f-json.log",
+        "Name": "/restaurant",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "restaurant_default",
+            "PortBindings": {
+                "8080/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "9000"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "host",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/8e2807b0628f1522cb244bcca461dfef283b1f85a26850c88faa9f77a31174ba-init/diff:/var/lib/docker/overlay2/rsvwwuy2y88ur9odoxifjutdg/diff:/var/lib/docker/overlay2/c911f318e1edf39c5829d42374bcfa7acaedf7aa61b583f9b9a23ff3a0b554bd/diff:/var/lib/docker/overlay2/8d1577524d85a636e23f9358d48e05fdd9845bcfe56156760c2341d1910b6a19/diff:/var/lib/docker/overlay2/c053bf9907bc19fcf2e9732f8f550f010d076deb231ba3230345ac3b8baf9926/diff:/var/lib/docker/overlay2/4c52d3be7f80b2d30c331c9fb4b7fce822786ec3445aca2cf37ed6695327c4b5/diff:/var/lib/docker/overlay2/6cfd96fcbe58fa580bdd74641df7558c9db4355a26550b638ce11ac4a964dd7c/diff",
+                "MergedDir": "/var/lib/docker/overlay2/8e2807b0628f1522cb244bcca461dfef283b1f85a26850c88faa9f77a31174ba/merged",
+                "UpperDir": "/var/lib/docker/overlay2/8e2807b0628f1522cb244bcca461dfef283b1f85a26850c88faa9f77a31174ba/diff",
+                "WorkDir": "/var/lib/docker/overlay2/8e2807b0628f1522cb244bcca461dfef283b1f85a26850c88faa9f77a31174ba/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "015cdeb3462e",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "8080/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "JAVA_HOME=/opt/java/openjdk",
+                "LANG=en_US.UTF-8",
+                "LANGUAGE=en_US:en",
+                "LC_ALL=en_US.UTF-8",
+                "JAVA_VERSION=jdk-17.0.8.1+1"
+            ],
+            "Cmd": null,
+            "Image": "restaurant",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": [
+                "java",
+                "-jar",
+                "/usr/local/lib/restaurant.jar"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "7dd305bef2f0e53cecebf2158cbd5ca8381c224db95815bb23e2b3fa8823be94",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "",
+                "com.docker.compose.image": "sha256:fbd8ffde2ed88640048fa824c5f7fc20dc12f1c8c63771287ef50bc17cc12550",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "restaurant",
+                "com.docker.compose.project.config_files": "C:\\Users\\sean_\\Documents\\JAVA\\restaurant\\docker-compose.yml",
+                "com.docker.compose.project.working_dir": "C:\\Users\\sean_\\Documents\\JAVA\\restaurant",
+                "com.docker.compose.replace": "fc9bdd7a1f391f3894c03d82af80464b5fb41efdb7884ed4c9a321773039794a",
+                "com.docker.compose.service": "backend",
+                "com.docker.compose.version": "2.23.0",
+                "org.opencontainers.image.ref.name": "ubuntu",
+                "org.opencontainers.image.version": "22.04"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "3f269ea4868151ec211fbd4b0895bd438a93e4d10831bf3eab6d6de8e25ed90e",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "8080/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "9000"
+                    }
+                ]
+            },
+            "SandboxKey": "/var/run/docker/netns/3f269ea48681",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "restaurant_default": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "restaurant",
+                        "backend",
+                        "015cdeb3462e"
+                    ],
+                    "NetworkID": "3f895a8ab6ce903ef55b9a22fd5da6fff56a879e8862e0d032f903f8ad13f38a",
+                    "EndpointID": "44fe4011ce8e9e712794f1b23832c193dac10f6256be208bb5a58e5bdc926bd9",
+                    "Gateway": "172.18.0.1",
+                    "IPAddress": "172.18.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:12:00:02",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]
