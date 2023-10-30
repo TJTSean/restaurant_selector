@@ -11,7 +11,7 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class AppComponent implements OnInit {
   [x: string]: any;
-  title = 'selectorapp';
+  title = 'Restaurant Selector';
   appState$!: Observable<AppState<RestaurantService>>;
   constructor(
     private restaurantService: RestaurantService,
@@ -19,23 +19,4 @@ export class AppComponent implements OnInit {
     ) {}
 
   ngOnInit(): void {}
-
-  @ViewChild('inputForm', { static: true })
-  inputForm!: TemplateRef<any>;
-  openDialogWithoutRef() {
-    this.dialog.open(this.inputForm);
-  }
-  addRestaurantModal() {
-    this.dialog.open(this.inputForm);
-  }
-
-  restaurant = {
-    name: "KFC",
-    address: "Street 123",
-    submitted_By: "Mary"
-  };
-
-  onSubmit() {
-    console.log(JSON.stringify(this.restaurant, undefined, 2));
-  }
 }
