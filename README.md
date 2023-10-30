@@ -17,4 +17,4 @@ To run the Angular UI, run the following command in a terminal window (in the fr
 
 To build and both as docker container:
 
-  - docker-compose up
+  - docker-compose up --build --force-recreate
