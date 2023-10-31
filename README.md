@@ -1,9 +1,13 @@
 # Restaurant Selector Mini Project
-Base project of Spring Boot and Angular UI.
+Mini project of Spring Boot and Angular UI 
+
+Features:
+  - Takes in a restaurant as input from the UI
+  - Shows a random restaurant from all the restaurants submitted
 
 # How to Run Both Together as Docker containers
 
-To build and both as docker container:
+To build and both as docker container, run the following command in a terminal window in the base directory:
 
   - docker-compose up --build --force-recreate
 
