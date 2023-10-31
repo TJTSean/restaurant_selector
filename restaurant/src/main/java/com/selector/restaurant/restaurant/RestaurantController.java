@@ -15,6 +15,13 @@ import java.util.Map;
 public class RestaurantController {
     @Autowired
     private RestaurantService restaurantService;
+
+    /**
+     * Accepts a restaurant object and stores it in database
+     *  - If restaurant name has been submitted before, error is thrown and restaurant is not entered into list again
+     * @param restaurant
+     * @return ResponseEntity<Restaurant>
+     */
     @PostMapping(path = "/add", consumes = {"application/json"})
     public ResponseEntity<Response> addRestaurant(@RequestBody Restaurant restaurant) {
         try {
@@ -39,7 +46,11 @@ public class RestaurantController {
         }
     }
 
-
+    /**
+     * Returns a random restaurant from the list of submitted restaurants
+     *  - If there is no restaurant submitted yet, returns response that no restaurants have been submitted
+     * @return ResponseEntity<Restaurant>
+     */
     @GetMapping("/randomRetrieval")
     public ResponseEntity<Response> getAtRandom() {
         try {
