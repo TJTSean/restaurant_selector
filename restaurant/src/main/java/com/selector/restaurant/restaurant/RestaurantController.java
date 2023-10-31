@@ -74,14 +74,4 @@ public class RestaurantController {
             );
         }
     }
-
-    /**
-     * Check if there is any restaurant in storage
-     *  - true if list is empty
-     *  - false if list is not empty
-     * @return
-     */
-    private Boolean listIsEmpty() {
-        return restaurantService.getList().isEmpty();
-    }
 }
